@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.3.1/modules/pagination/pagination.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <div class="header-nav">
+                <a href="#" class="logo link">
+                    <img src="./assets/images/logo-img.png" class="logo-img" alt="logo for HorDog">
+                    <img src="./assets/images/logo-text.png" class="logo-text" alt="logo for HorDog">
+                </a>
+                <div class="search">
+                    <input type="search" name="search" id="search" placeholder="Поиск">
+                    <label for="search">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0568 16C15.6091 16 16 15.5792 16 15.0405C16 14.788 15.915 14.5523 15.7281 14.3672L11.726 10.3945C12.5672 9.30037 13.0685 7.94529 13.0685 6.47238C13.0685 2.91215 10.1285 0 6.53425 0C2.93999 0 0 2.91215 0 6.47238C0 10.0326 2.93999 12.9448 6.53425 12.9448C7.95327 12.9448 9.26182 12.4903 10.3324 11.7328L14.3601 15.7223C14.547 15.9074 14.7934 16 15.0568 16ZM6.53425 11.5476C3.73022 11.5476 1.41052 9.24987 1.41052 6.47238C1.41052 3.6949 3.73022 1.39716 6.53425 1.39716C9.33829 1.39716 11.658 3.6949 11.658 6.47238C11.658 9.24987 9.33829 11.5476 6.53425 11.5476Z" fill="#7B8E98"/>
+                        </svg>
+                    </label>
+                </div>
+                <div class="shopping-link">
+                    <a href="#" class="link-favorites desktop-link link" >
+                        <img width="18" height="20" src="./assets/images/icon-Favorites.svg" alt="favorites">
+                    </a>
+                    <a href="#" class="link-cart desktop-link link">
+                        <img width="18" height="20" src="./assets/images/icon-Cart.svg" alt="cart">
+                    </a>
+                    <a href="#" class="link-home desktop-link link">
+                        <img width="22" height="20" src="./assets/images/icon-logo.svg" alt="home">
+                    </a>
+                    <a href="#" class="link-menu mobile-link link">
+                        <img width="20" height="12" src="./assets/images/icon-Menu.svg" alt="menu">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main">
+        <div class="main-wrapper">
+            <h2 class="bag-items-title">
+                <span>4 товара</span> в корзине
+            </h2>
+            <section class="bag-items">
+                <div class="bag-items-selected">
+                    <div class="bag-items-item">
+                        <div class="bag-items-card">
+                            <a href="#" class="bag-items-item-img link">
+                                <img width="68" height="68" src="./assets/images/bag-item1.jpg" alt="Рога оленя в упаковке">
+                            </a>
+                            <div class="bag-items-item-info">
+                                <div class="bag-items-item-price">
+                                    <p class="old-price">
+                                        3 430 ₽
+                                    </p>
+                                    <p class="new-price">
+                                        2 740 ₽
+                                    </p>
+                                </div>
+                                <a href="#" class="bag-items-item-text link">
+                                    <h3 class="bag-items-item-name">
+                                        Рога оленя для собак весом от 10 до 30 кг. Размер XL
+                                    </h3>
+                                    <p class="bag-items-item-units">
+                                        Размер XL от 30 кг
+                                    </p>
+                                </a>
+                                <div class="bag-items-item-quality">
+                                    <a href="#" class="link">
+                                        <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0458 1.83268C11.4709 1.83268 11.8333 1.45988 11.8333 0.999349C11.8333 0.546133 11.4709 0.166016 11.0458 0.166016H0.954191C0.543001 0.166016 0.166656 0.546133 0.166656 0.999349C0.166656 1.45988 0.543001 1.83268 0.954191 1.83268H11.0458Z" fill="#1A1A1A"/>
+                                        </svg>
+                                    </a>
+                                    <p>
+                                        2
+                                    </p>
+                                    <a href="#" class="link">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00001 11.8327C6.43907 11.8327 6.79451 11.4762 6.79451 11.0718V6.78078H11.0458C11.4709 6.78078 11.8333 6.43119 11.8333 5.99935C11.8333 5.57436 11.4709 5.21792 11.0458 5.21792H6.79451V0.926885C6.79451 0.515604 6.43907 0.166016 6.00001 0.166016C5.56791 0.166016 5.2055 0.515604 5.2055 0.926885V5.21792H0.954207C0.543016 5.21792 0.166672 5.57436 0.166672 5.99935C0.166672 6.43119 0.543016 6.78078 0.954207 6.78078H5.2055V11.0718C5.2055 11.4762 5.56791 11.8327 6.00001 11.8327Z" fill="#1A1A1A"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="#" class="trash link">
+                                <img width="15" height="17" src="./assets/images/icon-Trash.svg" alt="в корзину">
+                            </a>
+                        </div>
+                        <div class="bag-items-card">
+                            <a href="#" class="bag-items-item-img link">
+                                <img width="68" height="68" src="./assets/images/bag-item2.jpg" alt="Бублик из бычьего корня">
+                            </a>
+                            <div class="bag-items-item-info">
+                                <div class="bag-items-item-price">
+                                    <p class="price">
+                                        495 ₽
+                                    </p>
+                                </div>
+                                <a href="#" class="bag-items-item-text link">
+                                    <h3 class="bag-items-item-name">
+                                        Бублик из бычьего корня
+                                    </h3>
+                                    <p class="bag-items-item-units">
+                                        1 штука
+                                    </p>
+                                </a>
+                                <div class="bag-items-item-quality">
+                                    <a href="#" class="link">
+                                        <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0458 1.83268C11.4709 1.83268 11.8333 1.45988 11.8333 0.999349C11.8333 0.546133 11.4709 0.166016 11.0458 0.166016H0.954191C0.543001 0.166016 0.166656 0.546133 0.166656 0.999349C0.166656 1.45988 0.543001 1.83268 0.954191 1.83268H11.0458Z" fill="#1A1A1A"/>
+                                        </svg>
+                                    </a>
+                                    <p>
+                                        1
+                                    </p>
+                                    <a href="#" class="link">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00001 11.8327C6.43907 11.8327 6.79451 11.4762 6.79451 11.0718V6.78078H11.0458C11.4709 6.78078 11.8333 6.43119 11.8333 5.99935C11.8333 5.57436 11.4709 5.21792 11.0458 5.21792H6.79451V0.926885C6.79451 0.515604 6.43907 0.166016 6.00001 0.166016C5.56791 0.166016 5.2055 0.515604 5.2055 0.926885V5.21792H0.954207C0.543016 5.21792 0.166672 5.57436 0.166672 5.99935C0.166672 6.43119 0.543016 6.78078 0.954207 6.78078H5.2055V11.0718C5.2055 11.4762 5.56791 11.8327 6.00001 11.8327Z" fill="#1A1A1A"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="#" class="trash link">
+                                <img width="15" height="17" src="./assets/images/icon-Trash.svg" alt="в корзину">
+                            </a>
+                        </div>
+                        <div class="bag-items-card-gift">
+                            <div class="bag-items-card-gift-wrap">
+                                <a href="#" class="bag-items-card-gift-img link">
+                                    <img width="62" height="62" src="./assets/images/bag-item3.jpg" alt="Легкое говяжье - пластины">
+                                </a>
+                                <div class="bag-items-card-gift-info">
+                                    <a href="#" class="bag-items-card-gift-text link">
+                                        <h3 class="bag-items-card-gift-name">
+                                            Легкое говяжье - пластины
+                                        </h3>
+                                        <p class="bag-items-card-gift-units">
+                                            100 грамм
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="#" class="gift link">
+                                <img width="20" height="20" src="./assets/images/icon-Gift.svg" alt="подарок">
+                                <div class="gift-promo">
+                                    <h3 class="gift-title">
+                                        Подарок
+                                    </h3>
+                                    <p class="gift-text">
+                                        за первый заказ!
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bag-items-check-del">
+                    <div class="bag-items-checkout">
+                        <h1>
+                            Ваша корзина
+                        </h1>
+                        <div class="bag-items-checkout-chapter">
+                            <p class="bag-items-checkout-text">
+                                Товары (4)
+                            </p>
+                            <p class="bag-items-checkout-goods-sum">
+                                3 925 ₽
+                            </p>
+                        </div>
+                        <div class="bag-items-checkout-chapter">
+                            <p class="bag-items-checkout-text">
+                                Скидка
+                            </p>
+                            <p class="bag-items-checkout-discount-sum">
+                                - 690 ₽
+                            </p>
+                        </div>
+                        <div class="bag-items-checkout-chapter bag-items-checkout-total">
+                            <p class="bag-items-checkout-total-text">
+                                Общая стоимость
+                            </p>
+                            <p class="bag-items-checkout-total-sum">
+                                3 235 ₽
+                            </p>
+                        </div>
+                        <a href="#" class="bag-items-checkout-go link" >
+                            Перейти к оформлению
+                        </a>
+                    </div>
+                    <div class="bag-items-delivery">
+                        <img src="./assets/images/icon-Truck.svg" alt="Доставка">
+                        <div class="bag-items-delivery-promo">
+                            <h3>
+                                Доставка по всему Миру!
+                            </h3>
+                            <p>
+                                Доставка курьером — <span>от 399 ₽</span>
+                            </p>
+                            <p>
+                                Доставка в пункт выдачи — <span>от 199 ₽</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="promo">
+                <div class="promo-header">
+                    <h2>
+                        С этим товаром заказывают
+                    </h2>
+                    <div class="swiper-buttons">
+                        <div class="promo-swiper-button-prev">
+                            <img width="8" height="14" src="./assets/images/arrow-Left.png" alt="Влево">
+                        </div>
+                        <div class="promo-swiper-button-next">
+                            <img width="8" height="14" src="./assets/images/arrow-Righ.png" alt="Вправо">
+                        </div>
+                    </div>
+                </div>
+                <div class="promo-swiper swiper">
+                    <div class="promo-card swiper-wrapper">
+                        <div class="promo-card-item swiper-slide">
+                            <a href="#" class="promo-card-item-info link">
+                                <div class="promo-card-item-img">
+                                    <img width="187" height="125" src="./assets/images/promo-image-1.png" alt="Желудки утиные">
+                                </div>
+                                <p class="promo-card-item-price">
+                                    380 ₽
+                                </p>
+                                <div class="promo-card-item-text">
+                                    <p class="promo-card-item-units">
+                                        1 кг
+                                    </p>
+                                    <h3 class="promo-card-item-name">
+                                        Желудки утиные сушено-вяленые
+                                    </h3>
+                                </div>
+                            </a>
+                            <button class="like">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C12.2115 21 12.5136 20.8627 12.7351 20.7353C18.4048 17.2059 22 13.098 22 8.92157C22 5.45098 19.5529 3 16.29 3C14.427 3 12.9164 3.86275 12 5.18627C11.1037 3.87255 9.57301 3 7.70997 3C4.44713 3 2 5.45098 2 8.92157C2 13.098 5.59517 17.2059 11.2749 20.7353C11.4864 20.8627 11.7885 21 12 21ZM12 19.3431C11.9597 19.3431 11.8892 19.2941 11.7986 19.2255C7.57905 16.5 3.62135 12.5686 3.62135 8.92157C3.62135 6.31373 5.35347 4.57843 7.68983 4.57843C9.58308 4.57843 10.6707 5.72549 11.3152 6.70588C11.5871 7.09804 11.7583 7.20588 12 7.20588C12.2417 7.20588 12.3927 7.08824 12.6848 6.70588C13.3797 5.7451 14.427 4.57843 16.3102 4.57843C18.6465 4.57843 20.3787 6.31373 20.3787 8.92157C20.3787 12.5686 16.4209 16.5 12.2115 19.2255C12.1108 19.2941 12.0403 19.3431 12 19.3431Z" fill="#7B8E98"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19.3428C11.9597 19.3428 11.8892 19.2938 11.7986 19.2252C7.57904 16.4997 3.62134 12.5683 3.62134 8.92126C3.62134 6.31342 5.35346 4.57812 7.68982 4.57812C9.58307 4.57812 10.6707 5.72518 11.3152 6.70558C11.5871 7.09773 11.7583 7.20558 12 7.20558C12.2417 7.20558 12.3927 7.08793 12.6848 6.70558C13.3796 5.74479 14.427 4.57812 16.3102 4.57812C18.6465 4.57812 20.3786 6.31342 20.3786 8.92126C20.3786 12.5683 16.4209 16.4997 12.2115 19.2252C12.1108 19.2938 12.0403 19.3428 12 19.3428Z" fill="white"/>
+                                </svg>
+                            </button>
+                            <a href="#" class="promo-card-item-inbag link">
+                                В корзину
+                            </a>
+                        </div>
+    
+                        <div class="promo-card-item swiper-slide">
+                            <a href="#" class="promo-card-item-info link">
+                                <div class="promo-card-item-img">
+                                    <img width="187" height="125" src="./assets/images/promo-image-2.png" alt="Мелкая говяжья сушено-вяленая жилка">
+                                </div>
+                                <p class="promo-card-item-price">
+                                    300 ₽
+                                </p>
+                                <div class="promo-card-item-text">
+                                    <p class="promo-card-item-units">
+                                        100 г
+                                    </p>
+                                    <h3 class="promo-card-item-name">
+                                        Мелкая говяжья сушено-вяленая жилка
+                                    </h3>
+                                </div>
+                            </a>
+                            <button class="like">
+                                <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3351 17.7353C11.1136 17.8627 10.8115 18 10.6 18C10.3885 18 10.0864 17.8627 9.8749 17.7353C4.19514 14.2059 0.599976 10.098 0.599976 5.92157C0.599976 2.45098 3.04711 0 6.30995 0C8.17299 0 9.7037 0.872549 10.6 2.18627C11.5164 0.862745 13.027 0 14.89 0C18.1528 0 20.6 2.45098 20.6 5.92157C20.6 10.098 17.0048 14.2059 11.3351 17.7353Z" fill="#F44336"/>
+                                </svg>
+                            </button>
+                            <a href="#" class="promo-card-item-inbag link">
+                                В корзину
+                            </a>
+                        </div>
+    
+                        <div class="promo-card-item swiper-slide">
+                            <a href="#" class="promo-card-item-info link">
+                                <div class="promo-card-item-img">
+                                    <img width="187" height="125" src="./assets/images/promo-image-3.png" alt="Печенья с яблоком">
+                                </div>
+                                <p class="promo-card-item-price">
+                                    495 ₽
+                                </p>
+                                <div class="promo-card-item-text">
+                                    <p class="promo-card-item-units">
+                                        14 шт
+                                    </p>
+                                    <h3 class="promo-card-item-name">
+                                        Печенья с яблоком (печень говяжья, сердце говяжье)
+                                    </h3>
+                                </div>
+                            </a>
+                            <button class="like">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C12.2115 21 12.5136 20.8627 12.7351 20.7353C18.4048 17.2059 22 13.098 22 8.92157C22 5.45098 19.5529 3 16.29 3C14.427 3 12.9164 3.86275 12 5.18627C11.1037 3.87255 9.57301 3 7.70997 3C4.44713 3 2 5.45098 2 8.92157C2 13.098 5.59517 17.2059 11.2749 20.7353C11.4864 20.8627 11.7885 21 12 21ZM12 19.3431C11.9597 19.3431 11.8892 19.2941 11.7986 19.2255C7.57905 16.5 3.62135 12.5686 3.62135 8.92157C3.62135 6.31373 5.35347 4.57843 7.68983 4.57843C9.58308 4.57843 10.6707 5.72549 11.3152 6.70588C11.5871 7.09804 11.7583 7.20588 12 7.20588C12.2417 7.20588 12.3927 7.08824 12.6848 6.70588C13.3797 5.7451 14.427 4.57843 16.3102 4.57843C18.6465 4.57843 20.3787 6.31373 20.3787 8.92157C20.3787 12.5686 16.4209 16.5 12.2115 19.2255C12.1108 19.2941 12.0403 19.3431 12 19.3431Z" fill="#7B8E98"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19.3428C11.9597 19.3428 11.8892 19.2938 11.7986 19.2252C7.57904 16.4997 3.62134 12.5683 3.62134 8.92126C3.62134 6.31342 5.35346 4.57812 7.68982 4.57812C9.58307 4.57812 10.6707 5.72518 11.3152 6.70558C11.5871 7.09773 11.7583 7.20558 12 7.20558C12.2417 7.20558 12.3927 7.08793 12.6848 6.70558C13.3796 5.74479 14.427 4.57812 16.3102 4.57812C18.6465 4.57812 20.3786 6.31342 20.3786 8.92126C20.3786 12.5683 16.4209 16.4997 12.2115 19.2252C12.1108 19.2938 12.0403 19.3428 12 19.3428Z" fill="white"/>
+                                </svg>
+                            </button>
+                            <a href="#" class="promo-card-item-inbag link">
+                                В корзину
+                            </a>
+                        </div>
+    
+                        <div class="promo-card-item swiper-slide">
+                            <a href="#" class="promo-card-item-info link">
+                                <div class="promo-card-item-img">
+                                    <img width="187" height="125" src="./assets/images/promo-image-4.png" alt="Свиные уши для собак">
+                                </div>
+                                <p class="promo-card-item-price">
+                                    330 ₽
+                                </p>
+                                <div class="promo-card-item-text">
+                                    <p class="promo-card-item-units">
+                                        100 г
+                                    </p>
+                                    <h3 class="promo-card-item-name">
+                                        Свиные уши для собак
+                                    </h3>
+                                </div>
+                            </a>
+                            <button class="like">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C12.2115 21 12.5136 20.8627 12.7351 20.7353C18.4048 17.2059 22 13.098 22 8.92157C22 5.45098 19.5529 3 16.29 3C14.427 3 12.9164 3.86275 12 5.18627C11.1037 3.87255 9.57301 3 7.70997 3C4.44713 3 2 5.45098 2 8.92157C2 13.098 5.59517 17.2059 11.2749 20.7353C11.4864 20.8627 11.7885 21 12 21ZM12 19.3431C11.9597 19.3431 11.8892 19.2941 11.7986 19.2255C7.57905 16.5 3.62135 12.5686 3.62135 8.92157C3.62135 6.31373 5.35347 4.57843 7.68983 4.57843C9.58308 4.57843 10.6707 5.72549 11.3152 6.70588C11.5871 7.09804 11.7583 7.20588 12 7.20588C12.2417 7.20588 12.3927 7.08824 12.6848 6.70588C13.3797 5.7451 14.427 4.57843 16.3102 4.57843C18.6465 4.57843 20.3787 6.31373 20.3787 8.92157C20.3787 12.5686 16.4209 16.5 12.2115 19.2255C12.1108 19.2941 12.0403 19.3431 12 19.3431Z" fill="#7B8E98"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19.3428C11.9597 19.3428 11.8892 19.2938 11.7986 19.2252C7.57904 16.4997 3.62134 12.5683 3.62134 8.92126C3.62134 6.31342 5.35346 4.57812 7.68982 4.57812C9.58307 4.57812 10.6707 5.72518 11.3152 6.70558C11.5871 7.09773 11.7583 7.20558 12 7.20558C12.2417 7.20558 12.3927 7.08793 12.6848 6.70558C13.3796 5.74479 14.427 4.57812 16.3102 4.57812C18.6465 4.57812 20.3786 6.31342 20.3786 8.92126C20.3786 12.5683 16.4209 16.4997 12.2115 19.2252C12.1108 19.2938 12.0403 19.3428 12 19.3428Z" fill="white"/>
+                                </svg>
+                            </button>
+                            <a href="#" class="promo-card-item-inbag link">
+                                В корзину
+                            </a>
+                        </div>
+                        
+                        <div class="promo-card-item swiper-slide">
+                            <a href="#" class="promo-card-item-info link">
+                                <div class="promo-card-item-img">
+                                    <img width="187" height="125" src="./assets/images/promo-image-5.png" alt="Свиные уши для собак">
+                                </div>
+                                <p class="promo-card-item-price">
+                                    330 ₽
+                                </p>
+                                <div class="promo-card-item-text">
+                                    <p class="promo-card-item-units">
+                                        100 г
+                                    </p>
+                                    <h3 class="promo-card-item-name">
+                                        Свиные уши для собак
+                                    </h3>
+                                </div>
+                            </a>
+                            <button class="like">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C12.2115 21 12.5136 20.8627 12.7351 20.7353C18.4048 17.2059 22 13.098 22 8.92157C22 5.45098 19.5529 3 16.29 3C14.427 3 12.9164 3.86275 12 5.18627C11.1037 3.87255 9.57301 3 7.70997 3C4.44713 3 2 5.45098 2 8.92157C2 13.098 5.59517 17.2059 11.2749 20.7353C11.4864 20.8627 11.7885 21 12 21ZM12 19.3431C11.9597 19.3431 11.8892 19.2941 11.7986 19.2255C7.57905 16.5 3.62135 12.5686 3.62135 8.92157C3.62135 6.31373 5.35347 4.57843 7.68983 4.57843C9.58308 4.57843 10.6707 5.72549 11.3152 6.70588C11.5871 7.09804 11.7583 7.20588 12 7.20588C12.2417 7.20588 12.3927 7.08824 12.6848 6.70588C13.3797 5.7451 14.427 4.57843 16.3102 4.57843C18.6465 4.57843 20.3787 6.31373 20.3787 8.92157C20.3787 12.5686 16.4209 16.5 12.2115 19.2255C12.1108 19.2941 12.0403 19.3431 12 19.3431Z" fill="#7B8E98"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19.3428C11.9597 19.3428 11.8892 19.2938 11.7986 19.2252C7.57904 16.4997 3.62134 12.5683 3.62134 8.92126C3.62134 6.31342 5.35346 4.57812 7.68982 4.57812C9.58307 4.57812 10.6707 5.72518 11.3152 6.70558C11.5871 7.09773 11.7583 7.20558 12 7.20558C12.2417 7.20558 12.3927 7.08793 12.6848 6.70558C13.3796 5.74479 14.427 4.57812 16.3102 4.57812C18.6465 4.57812 20.3786 6.31342 20.3786 8.92126C20.3786 12.5683 16.4209 16.4997 12.2115 19.2252C12.1108 19.2938 12.0403 19.3428 12 19.3428Z" fill="white"/>
+                                </svg>
+                            </button>
+                            <a href="#" class="promo-card-item-inbag link">
+                                В корзину
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="banner swiper">
+                <div class="swiper-wrapper">
+                    <a href="#" class="banner-item banner-item-second swiper-slide link">
+                        <div class="banner-info">
+                            <h3 class="banner-item-name">
+                                Микс масел
+                            </h3>
+                            <p class="banner-item-second-text">
+                                пищевая здоровая натуральная добавка
+                            </p>
+                            
+                        </div>
+                        <div class="banner-design">
+                            <div class="banner-design-ellipse banner-design-ellipse-second"></div>
+                            <img src="./assets/images/banner-image-2.png" alt="Наборы для дрессировки">
+                        </div>
+                    </a>
+                    <a href="#" class="banner-item banner-item-first swiper-slide link">
+                        <div class="banner-info">
+                            <h3 class="banner-item-name">
+                                Наборы
+                            </h3>
+                            <p class="banner-item-first-text">
+                                для дрессировки
+                            </p>
+                            <p class="banner-item-price">
+                                от 840 ₽
+                            </p>
+                        </div>
+                        <div class="banner-design">
+                            <div class="banner-design-ellipse banner-design-ellipse-first"></div>
+                            <img src="./assets/images/banner-image-1.png" alt="Наборы для дрессировки">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </section>
+            <section class="history">
+                <div class="history-header">
+                    <h2>
+                        Вы смотрели
+                    </h2>
+                    <div class="swiper-buttons">
+                        <div class="history-swiper-button-prev">
+                            <img width="8" height="14" src="./assets/images/arrow-Left.png" alt="Влево">
+                        </div>
+                        <div class="history-swiper-button-next">
+                            <img width="8" height="14" src="./assets/images/arrow-Righ.png" alt="Вправо">
+                        </div>
+                    </div>
+                </div>
+                <div class="history-swiper swiper">
+                    <div class="history-card swiper-wrapper">
+                        <div class="history-card-item swiper-slide">
+                            <a href="#" class="history-card-item-info link">
+                                <div class="history-card-item-img">
+                                    <img width="187" height="125" src="./assets/images/history-image-1.png" alt="Игрушка-погрызушка для мелких пород">
+                                </div>
+                                <p class="history-card-item-price">
+                                    590 ₽
+                                </p>
+                                <div class="history-card-item-text">
+                                    <p class="history-card-item-units">
+                                        1 шт
+                                    </p>
+                                    <h3 class="history-card-item-name">
+                                        Игрушка-погрызушка для мелких пород
+                                    </h3>
+                                </div>
+                            </a>
+                            <button class="like">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C12.2115 21 12.5136 20.8627 12.7351 20.7353C18.4048 17.2059 22 13.098 22 8.92157C22 5.45098 19.5529 3 16.29 3C14.427 3 12.9164 3.86275 12 5.18627C11.1037 3.87255 9.57301 3 7.70997 3C4.44713 3 2 5.45098 2 8.92157C2 13.098 5.59517 17.2059 11.2749 20.7353C11.4864 20.8627 11.7885 21 12 21ZM12 19.3431C11.9597 19.3431 11.8892 19.2941 11.7986 19.2255C7.57905 16.5 3.62135 12.5686 3.62135 8.92157C3.62135 6.31373 5.35347 4.57843 7.68983 4.57843C9.58308 4.57843 10.6707 5.72549 11.3152 6.70588C11.5871 7.09804 11.7583 7.20588 12 7.20588C12.2417 7.20588 12.3927 7.08824 12.6848 6.70588C13.3797 5.7451 14.427 4.57843 16.3102 4.57843C18.6465 4.57843 20.3787 6.31373 20.3787 8.92157C20.3787 12.5686 16.4209 16.5 12.2115 19.2255C12.1108 19.2941 12.0403 19.3431 12 19.3431Z" fill="#7B8E98"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19.3428C11.9597 19.3428 11.8892 19.2938 11.7986 19.2252C7.57904 16.4997 3.62134 12.5683 3.62134 8.92126C3.62134 6.31342 5.35346 4.57812 7.68982 4.57812C9.58307 4.57812 10.6707 5.72518 11.3152 6.70558C11.5871 7.09773 11.7583 7.20558 12 7.20558C12.2417 7.20558 12.3927 7.08793 12.6848 6.70558C13.3796 5.74479 14.427 4.57812 16.3102 4.57812C18.6465 4.57812 20.3786 6.31342 20.3786 8.92126C20.3786 12.5683 16.4209 16.4997 12.2115 19.2252C12.1108 19.2938 12.0403 19.3428 12 19.3428Z" fill="white"/>
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <div class="history-card-item swiper-slide">
+                            <a href="#" class="history-card-item-info link">
+                                <div class="history-card-item-img">
+                                    <img width="187" height="125" src="./assets/images/history-image-2.png" alt="Игрушка-погрызушка для средних пород">
+                                </div>
+                                <p class="history-card-item-price">
+                                    790 ₽
+                                </p>
+                                <div class="history-card-item-text">
+                                    <p class="history-card-item-units">
+                                        1 шт
+                                    </p>
+                                    <h3 class="history-card-item-name">
+                                        Игрушка-погрызушка для средних пород
+                                    </h3>
+                                </div>
+                            </a>
+                            <button class="like">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C12.2115 21 12.5136 20.8627 12.7351 20.7353C18.4048 17.2059 22 13.098 22 8.92157C22 5.45098 19.5529 3 16.29 3C14.427 3 12.9164 3.86275 12 5.18627C11.1037 3.87255 9.57301 3 7.70997 3C4.44713 3 2 5.45098 2 8.92157C2 13.098 5.59517 17.2059 11.2749 20.7353C11.4864 20.8627 11.7885 21 12 21ZM12 19.3431C11.9597 19.3431 11.8892 19.2941 11.7986 19.2255C7.57905 16.5 3.62135 12.5686 3.62135 8.92157C3.62135 6.31373 5.35347 4.57843 7.68983 4.57843C9.58308 4.57843 10.6707 5.72549 11.3152 6.70588C11.5871 7.09804 11.7583 7.20588 12 7.20588C12.2417 7.20588 12.3927 7.08824 12.6848 6.70588C13.3797 5.7451 14.427 4.57843 16.3102 4.57843C18.6465 4.57843 20.3787 6.31373 20.3787 8.92157C20.3787 12.5686 16.4209 16.5 12.2115 19.2255C12.1108 19.2941 12.0403 19.3431 12 19.3431Z" fill="#7B8E98"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19.3428C11.9597 19.3428 11.8892 19.2938 11.7986 19.2252C7.57904 16.4997 3.62134 12.5683 3.62134 8.92126C3.62134 6.31342 5.35346 4.57812 7.68982 4.57812C9.58307 4.57812 10.6707 5.72518 11.3152 6.70558C11.5871 7.09773 11.7583 7.20558 12 7.20558C12.2417 7.20558 12.3927 7.08793 12.6848 6.70558C13.3796 5.74479 14.427 4.57812 16.3102 4.57812C18.6465 4.57812 20.3786 6.31342 20.3786 8.92126C20.3786 12.5683 16.4209 16.4997 12.2115 19.2252C12.1108 19.2938 12.0403 19.3428 12 19.3428Z" fill="white"/>
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <div class="history-card-item swiper-slide">
+                            <a href="#" class="history-card-item-info link">
+                                <div class="history-card-item-img">
+                                    <img width="187" height="125" src="./assets/images/history-image-3.png" alt="Игрушка-погрызушка для крупных пород">
+                                </div>
+                                <p class="history-card-item-price">
+                                    495 ₽
+                                </p>
+                                <div class="history-card-item-text">
+                                    <p class="history-card-item-units">
+                                        1 шт
+                                    </p>
+                                    <h3 class="history-card-item-name">
+                                        Игрушка-погрызушка для крупных пород
+                                    </h3>
+                                </div>
+                            </a>
+                            <button class="like">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C12.2115 21 12.5136 20.8627 12.7351 20.7353C18.4048 17.2059 22 13.098 22 8.92157C22 5.45098 19.5529 3 16.29 3C14.427 3 12.9164 3.86275 12 5.18627C11.1037 3.87255 9.57301 3 7.70997 3C4.44713 3 2 5.45098 2 8.92157C2 13.098 5.59517 17.2059 11.2749 20.7353C11.4864 20.8627 11.7885 21 12 21ZM12 19.3431C11.9597 19.3431 11.8892 19.2941 11.7986 19.2255C7.57905 16.5 3.62135 12.5686 3.62135 8.92157C3.62135 6.31373 5.35347 4.57843 7.68983 4.57843C9.58308 4.57843 10.6707 5.72549 11.3152 6.70588C11.5871 7.09804 11.7583 7.20588 12 7.20588C12.2417 7.20588 12.3927 7.08824 12.6848 6.70588C13.3797 5.7451 14.427 4.57843 16.3102 4.57843C18.6465 4.57843 20.3787 6.31373 20.3787 8.92157C20.3787 12.5686 16.4209 16.5 12.2115 19.2255C12.1108 19.2941 12.0403 19.3431 12 19.3431Z" fill="#7B8E98"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19.3428C11.9597 19.3428 11.8892 19.2938 11.7986 19.2252C7.57904 16.4997 3.62134 12.5683 3.62134 8.92126C3.62134 6.31342 5.35346 4.57812 7.68982 4.57812C9.58307 4.57812 10.6707 5.72518 11.3152 6.70558C11.5871 7.09773 11.7583 7.20558 12 7.20558C12.2417 7.20558 12.3927 7.08793 12.6848 6.70558C13.3796 5.74479 14.427 4.57812 16.3102 4.57812C18.6465 4.57812 20.3786 6.31342 20.3786 8.92126C20.3786 12.5683 16.4209 16.4997 12.2115 19.2252C12.1108 19.2938 12.0403 19.3428 12 19.3428Z" fill="white"/>
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <div class="history-card-item sale swiper-slide">
+                            <a href="#" class="history-card-item-info link">
+                                <div class="history-card-item-img">
+                                    <img width="187" height="125" src="./assets/images/history-image-4.png" alt="Бублик из бычьего корня">
+                                </div>
+                                <div class="history-card-item-price-cont">
+                                    <p class="history-card-item-price-old">
+                                        550 ₽
+                                    </p>
+                                    <p class="history-card-item-price history-card-item-price-new">
+                                        495 ₽
+                                    </p>
+                                </div>
+                                <div class="history-card-item-text">
+                                    <p class="history-card-item-units">
+                                        100 г
+                                    </p>
+                                    <h3 class="history-card-item-name">
+                                        Бублик из бычьего корня
+                                    </h3>
+                                </div>
+                            </a>
+                            <button class="like">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C12.2115 21 12.5136 20.8627 12.7351 20.7353C18.4048 17.2059 22 13.098 22 8.92157C22 5.45098 19.5529 3 16.29 3C14.427 3 12.9164 3.86275 12 5.18627C11.1037 3.87255 9.57301 3 7.70997 3C4.44713 3 2 5.45098 2 8.92157C2 13.098 5.59517 17.2059 11.2749 20.7353C11.4864 20.8627 11.7885 21 12 21ZM12 19.3431C11.9597 19.3431 11.8892 19.2941 11.7986 19.2255C7.57905 16.5 3.62135 12.5686 3.62135 8.92157C3.62135 6.31373 5.35347 4.57843 7.68983 4.57843C9.58308 4.57843 10.6707 5.72549 11.3152 6.70588C11.5871 7.09804 11.7583 7.20588 12 7.20588C12.2417 7.20588 12.3927 7.08824 12.6848 6.70588C13.3797 5.7451 14.427 4.57843 16.3102 4.57843C18.6465 4.57843 20.3787 6.31373 20.3787 8.92157C20.3787 12.5686 16.4209 16.5 12.2115 19.2255C12.1108 19.2941 12.0403 19.3431 12 19.3431Z" fill="#7B8E98"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19.3428C11.9597 19.3428 11.8892 19.2938 11.7986 19.2252C7.57904 16.4997 3.62134 12.5683 3.62134 8.92126C3.62134 6.31342 5.35346 4.57812 7.68982 4.57812C9.58307 4.57812 10.6707 5.72518 11.3152 6.70558C11.5871 7.09773 11.7583 7.20558 12 7.20558C12.2417 7.20558 12.3927 7.08793 12.6848 6.70558C13.3796 5.74479 14.427 4.57812 16.3102 4.57812C18.6465 4.57812 20.3786 6.31342 20.3786 8.92126C20.3786 12.5683 16.4209 16.4997 12.2115 19.2252C12.1108 19.2938 12.0403 19.3428 12 19.3428Z" fill="white"/>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <div class="history-card-item swiper-slide">
+                            <a href="#" class="history-card-item-info link">
+                                <div class="history-card-item-img">
+                                    <img width="187" height="125" src="./assets/images/history-image-5.png" alt="Печенья с яблоком">
+                                </div>
+                                <p class="history-card-item-price">
+                                    340 ₽
+                                </p>
+                                <div class="history-card-item-text">
+                                    <p class="history-card-item-units">
+                                        14 шт
+                                    </p>
+                                    <h3 class="history-card-item-name">
+                                        Печенья с яблоком (печень говяжья, сер...
+                                    </h3>
+                                </div>
+                            </a>
+                            <button class="like">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C12.2115 21 12.5136 20.8627 12.7351 20.7353C18.4048 17.2059 22 13.098 22 8.92157C22 5.45098 19.5529 3 16.29 3C14.427 3 12.9164 3.86275 12 5.18627C11.1037 3.87255 9.57301 3 7.70997 3C4.44713 3 2 5.45098 2 8.92157C2 13.098 5.59517 17.2059 11.2749 20.7353C11.4864 20.8627 11.7885 21 12 21ZM12 19.3431C11.9597 19.3431 11.8892 19.2941 11.7986 19.2255C7.57905 16.5 3.62135 12.5686 3.62135 8.92157C3.62135 6.31373 5.35347 4.57843 7.68983 4.57843C9.58308 4.57843 10.6707 5.72549 11.3152 6.70588C11.5871 7.09804 11.7583 7.20588 12 7.20588C12.2417 7.20588 12.3927 7.08824 12.6848 6.70588C13.3797 5.7451 14.427 4.57843 16.3102 4.57843C18.6465 4.57843 20.3787 6.31373 20.3787 8.92157C20.3787 12.5686 16.4209 16.5 12.2115 19.2255C12.1108 19.2941 12.0403 19.3431 12 19.3431Z" fill="#7B8E98"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19.3428C11.9597 19.3428 11.8892 19.2938 11.7986 19.2252C7.57904 16.4997 3.62134 12.5683 3.62134 8.92126C3.62134 6.31342 5.35346 4.57812 7.68982 4.57812C9.58307 4.57812 10.6707 5.72518 11.3152 6.70558C11.5871 7.09773 11.7583 7.20558 12 7.20558C12.2417 7.20558 12.3927 7.08793 12.6848 6.70558C13.3796 5.74479 14.427 4.57812 16.3102 4.57812C18.6465 4.57812 20.3786 6.31342 20.3786 8.92126C20.3786 12.5683 16.4209 16.4997 12.2115 19.2252C12.1108 19.2938 12.0403 19.3428 12 19.3428Z" fill="white"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="communication mobile">
+            <div class="communication-contacts">
+                <h2 class="communication-contacts-info">
+                    Мы всегда на связи
+                </h2>
+                <a href="tel:89177172179" class="communication-contacts-tel link">
+                    8 (917) 717-21-79
+                </a>
+                <a href="email:hordog.ru@gmail.com" class="communication-contacts-email link">
+                    hordog.ru@gmail.com
+                </a>
+            </div>
+            <div class="communication-social-mobile">
+                <a href="#" class="communication-social-button link">
+                    <img src="./assets/images/logo-telegram.svg" alt="telegram">
+                </a>
+                <a href="#" class="communication-social-button link">
+                    <img src="./assets/images/logo-whatsapp.svg" alt="whatsapp">
+                </a>
+                <a href="#" class="communication-social-button link">
+                    <img src="./assets/images/logo-viber.svg" alt="viber">
+                </a>
+                <a href="#" class="communication-social-button link">
+                    <img src="./assets/images/logo-instagram.svg" alt="instagram">
+                </a>
+                <a href="#" class="communication-social-button link">
+                    <img src="./assets/images/logo-vk.svg" alt="vk">
+                </a>
+            </div>
+            <p class="communication-copyright-mobile">
+                © «Интернет-магазин натуральных лакомств для собак HorDog.ru»
+            </p>
+        </section>
+        <div class="go-to-checkout mobile">
+            <div class="go-to-checkout-total">
+                <p class="go-to-checkout-total-text">
+                    Итого
+                </p>
+                <p class="go-to-checkout-total-sum">
+                    3 235 ₽
+                </p>
+            </div>
+            <a href="#" class="go-to-checkout-button link">
+                Перейти к оформлению
+            </a>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-container">
+                <div class="footer-desktop">
+                    <div class="footer-desktop-logo-copy">
+                        <div class="footer-desktop-logo">
+                            <a href="#" class="logo link">
+                                <img src="./assets/images/logo-img.png" class="footer-desktop-logo-img" alt="logo for HorDog">
+                                <img src="./assets/images/logo-text.png" class="footer-desktop-logo-text" alt="logo for HorDog">
+                            </a>
+                        </div>
+                        <p class="footer-desktop-copyright">
+                            © «Интернет-магазин натуральных лакомств для собак HorDog.ru»
+                        </p>
+                    </div>
+                    <div class="footer-desktop-nav">
+                        <a href="#" class="footer-desktop-nav-link link">
+                            Каталог
+                        </a>
+                        <a href="#" class="footer-desktop-nav-link link">
+                            Акции
+                        </a>
+                        <a href="#" class="footer-desktop-nav-link link">
+                            Новости
+                        </a>
+                        <a href="#" class="footer-desktop-nav-link link">
+                            Отзывы
+                        </a>
+                    </div>
+                    <div class="footer-desktop-nav">
+                        <a href="#" class="footer-desktop-nav-link link">
+                            Оплата и доставка
+                        </a>
+                        <a href="#" class="footer-desktop-nav-link link">
+                            Часто спрашивают
+                        </a>
+                        <a href="#" class="footer-desktop-nav-link link">
+                            Обратная связь
+                        </a>
+                        <a href="#" class="footer-desktop-nav-link link">
+                            Контакты
+                        </a>
+                    </div>
+                    <div class="footer-desktop-info">
+                        <div class="footer-desktop-contacts">
+                            <h2 class="footer-desktop-contacts-caption">
+                                Мы на связи
+                            </h2>
+                            <a href="tel:89177172179" class="footer-desktop-contacts-tel link" >
+                                8 (917) 717-21-79
+                            </a>
+                            <a href="email:hordog.ru@gmail.com" class="footer-desktop-contacts-email link">
+                                hordog.ru@gmail.com
+                            </a>
+                        </div>
+                        <div class="footer-desktop-social">
+                            <a href="#" class="footer-desktop-social-button link">
+                                <img src="./assets/images/logo-telegram.svg" alt="telegram">
+                            </a>
+                            <a href="#" class="footer-desktop-social-button link">
+                                <img src="./assets/images/logo-whatsapp.svg" alt="whatsapp">
+                            </a>
+                            <a href="#" class="footer-desktop-social-button link">
+                                <img src="./assets/images/logo-viber.svg" alt="viber">
+                            </a>
+                            <a href="#" class="footer-desktop-social-button link">
+                                <img src="./assets/images/logo-instagram.svg" alt="instagram">
+                            </a>
+                            <a href="#" class="footer-desktop-social-button link">
+                                <img src="./assets/images/logo-vk.svg" alt="vk">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-mobile">
+                    <a href="#" class="footer-mobile-tabbar link">
+                        <img width="24" height="24" src="./assets/images/tabBar-home.svg" alt="Домой">
+                        <p class="footer-mobile-text">
+                            Домой
+                        </p>
+                    </a>
+                    <a href="#" class="footer-mobile-tabbar link">
+                        <img width="24" height="24" src="./assets/images/tabBar-catalog.svg" alt="Каталог">
+                        <p class="footer-mobile-text">
+                            Каталог
+                        </p>
+                    </a>
+                    <a href="#" class="footer-mobile-tabbar link added">
+                        <img width="24" height="24" src="./assets/images/tabBar-cart-fill.svg" alt="Главная">
+                        <p class="footer-mobile-text">
+                            Главная
+                        </p>
+                    </a>
+                    <a href="#" class="footer-mobile-tabbar link">
+                        <img width="24" height="24" src="./assets/images/tabBar-favorites.svg" alt="Избранное">
+                        <p class="footer-mobile-text">
+                            Избранное
+                        </p>
+                    </a>
+                    <a href="#" class="footer-mobile-tabbar link">
+                        <img width="24" height="24" src="./assets/images/tabBar-profile.svg" alt="Профиль">
+                        <p class="footer-mobile-text">
+                            Профиль
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./assets/scripts/scripts.js"></script>
+</body>
+</html>
